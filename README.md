@@ -7,3 +7,6 @@ Practice designing and building a RESTful API using Node.js, AWS Lambda, and API
 ## Getting Started
 
 ### Prerequisites
+
+
+### Building
