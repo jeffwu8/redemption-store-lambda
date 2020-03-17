@@ -1,0 +1,65 @@
+service: redemption-store-api
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+  memorySize: 768
+
+functions:
+  authorize:
+    handler: authorize.handler
+  authent:
+    handler: authent.handler
+    events:
+      - http:
+          path: login
+          method: post
+  coupons:
+    handler: coupon.handler
+    events:
+      - http:
+          path: coupons
+          method: get
+          authorizer: authorize
+      - http:
+          path: coupons/{code}
+          method: get
+          authorizer: authorize
+      - http:
+          path: coupons
+          method: post
+          authorizer: authorize
+      - http:
+          path: coupons/{code}
+          method: put
+          authorizer: authorize
+      - http:
+          path: coupons/{code}
+          method: delete
+          authorizer: authorize
+  products:
+    handler: product.handler
+    events:
+      - http:
+          path: products
+          method: get
+      - http:
+          path: products/{id}
+          method: get
+      - http:
+          path: products
+          method: post
+          authorizer: authorize
+      - http:
+          path: products/{id}
+          method: put
+          authorizer: authorize
+      - http:
+          path: products/{id}
+          method: delete
+          authorizer: authorize
+
+plugins:
+  - serverless-offline
