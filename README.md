@@ -3,3 +3,5 @@ Coupon and Product API for GC Fashion Store deployed using AWS Lambda Microservi
 
 ### Motivation
 Practice designing and building a RESTful API using AWS Lambda and API Gateway.
+
+## Getting Started
