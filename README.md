@@ -1,2 +1,5 @@
 # GC Fashion Store AWS Lambda Microservice
-GC Fashion Store Coupon and Product API deployed using AWS Lambda Microservice. Provides CRUD operations on Coupon and Product tables through HTTP requests.
+Coupon and Product API for GC Fashion Store deployed using AWS Lambda Microservice. Provides CRUD operations on Coupon and Product tables through HTTP requests.
+
+### Motivation
+Practice designing and building a RESTful API using AWS Lambda and API Gateway.
