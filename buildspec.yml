@@ -18,7 +18,7 @@ phases:
       - export DB_PASSWORD=$DB_PASSWORD
       - export DATABASE=$DATABASE
       - export JWT_SECRET=$JWT_SECRET
-  pre-build:
+  pre_build:
     commands:
       - cd $CODEBUILD_SRC_DIR_EnvArtifact
       - cp .env $CODEBUILD_SRC_DIR
